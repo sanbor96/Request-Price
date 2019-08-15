@@ -21,7 +21,7 @@ define(
                 type: 'popup',
                 responsive: true,
                 innerScroll: true,
-                title: 'Request Price',
+                title: $.mage.__('Request Price'),
                 buttons: [{
                     text: $.mage.__('Close'),
                     class: '',
@@ -58,7 +58,6 @@ define(
                         success: function () {
                             $form[0].reset();
                             $('#popup-modal-form').modal('closeModal');
-
                         }
                     });
                 }
