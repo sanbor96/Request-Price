@@ -1,0 +1,37 @@
+<?php
+/*
+ * Request price form
+ */
+?>
+<form class="form contact"
+      action="<?= $block->getFormAction(); ?>"
+      id="request-price-form"
+      method="post"
+      data-hasrequired="<?= __('* Required Fields') ?>"
+>
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <label class="label" for="name"><?= __('Name') ?></label>
+            <div class="control">
+                <input name="name" id="name" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><?= __('E-mail') ?></label>
+            <div class="control">
+                <input name="email" id="email" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field comment required">
+            <label class="label" for="comment"><?= __('Comment') ?></label>
+            <div class="control">
+                <textarea name="comment" id="comment" class="input-text" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="product_sku" id="product_sku" value="<?= $block->getCurrentProduct()->getSku(); ?>" />
+        </div>
+    </div>
+</form>
