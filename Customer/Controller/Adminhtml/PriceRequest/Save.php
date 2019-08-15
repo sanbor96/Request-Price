@@ -81,7 +81,7 @@ class Save extends Action
      * @param PriceRequestRepositoryInterface $priceRequestRepository
      * @param PriceRequestFactory             $priceRequestFactory
      */
-     public function __construct(
+    public function __construct(
         Action\Context $context,
         DataPersistorInterface $dataPersistor,
         StoreManagerInterface $storeManager,
